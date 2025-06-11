@@ -1,22 +1,32 @@
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
 import react from "../assets/web/react-seeklogo.svg";
-import php from "../assets/web/php-seeklogo.svg"
-import javascript from "../assets/web/javascript-js-seeklogo.svg"
-import css from "../assets/web/css3-seeklogo.svg"
-import laravel from "../assets/web/laravel-seeklogo.svg"
-import html from "../assets/web/html5-with-wordmark-color-seeklogo.svg"
-import bootstrap from "../assets/web/bootstrap-5-seeklogo.svg"
-import tailwind from "../assets/web/tailwind-css-seeklogo.svg"
-import jquery from "../assets/web/jquery-seeklogo.svg"
+import php from "../assets/web/php-seeklogo.svg";
+import javascript from "../assets/web/javascript-js-seeklogo.svg";
+import css from "../assets/web/css3-seeklogo.svg";
+import laravel from "../assets/web/laravel-seeklogo.svg";
+import html from "../assets/web/html5-with-wordmark-color-seeklogo.svg";
+import bootstrap from "../assets/web/bootstrap-5-seeklogo.svg";
+import tailwind from "../assets/web/tailwind-css-seeklogo.svg";
+import jquery from "../assets/web/jquery-seeklogo.svg";
 
-
-
-// import useMediaQuery from "../hooks/useMediaQuery";
-// import Skill from "../assets/web/woman-working-new-app_23-2148682102.avif";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const MySkill = ({ setSelectedPage }) => {
-  // const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediumScreen = useMediaQuery("(max-width: 1060px)");
+
+  const skillsIcon = [
+    { id: 1, src: html, alt: "HTML", label: "HTML" },
+    { id: 2, src: css, alt: "CSS3", label: "CSS3" },
+    { id: 3, src: javascript, alt: "JavaScript", label: "JavaScript" },
+    { id: 4, src: jquery, alt: "jQuery", label: "jQuery" },
+    { id: 5, src: react, alt: "React", label: "React" },
+    { id: 6, src: php, alt: "PHP", label: "PHP" },
+    { id: 7, src: laravel, alt: "Laravel", label: "Laravel" },
+    { id: 8, src: bootstrap, alt: "Bootstrap", label: "Bootstrap" },
+    { id: 9, src: tailwind, alt: "Tailwind", label: "Tailwind" },
+  ];
+
   return (
     <>
       <section id="skill" className="pt-10 pb-24 ">
@@ -34,52 +44,28 @@ const MySkill = ({ setSelectedPage }) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="font-playfair font-semibold text-4xl mb-5">
-              MY <span className="text-red">SKILLS</span>
-            </p>
-            <LineGradient width="sm:w-2/3" />
+            <div className="text-center">
+              <p className="font-playfair font-bold text-4xl mb-5">My Skills</p>
+            </div>
+            <LineGradient width="" />
             <div className="mt-10 mb-7">
-              <div className="text-lg font-bold">Specialized In</div>
-              <div className="grid grid-cols-3 gap-2 mt-6">
-                <div className="mb-2">
-                  <img src={html} alt="html" className=" w-10 h-10" />
-                  <div>HTML</div>
-                </div>
-                <div className="mb-2">
-                  <img src={css} alt="css" className=" w-10 h-10" />
-                  <div>CSS3</div>
-                </div>
-
-                <div className="mb-2">
-                  <img src={javascript} alt="javascript" className=" w-10 h-10" />
-                  <div>Javascript</div>
-                </div>
-      
-                <div className="mb-2">
-                  <img src={jquery} alt="jquery" className=" w-10 h-10" />
-                  <div>jQuery</div>
-                </div>
-                <div className="mb-2">
-                  <img src={react} alt="react" className=" w-10 h-10" />
-                  <div>React</div>
-                </div>
-                <div className="mb-2">
-                  <img src={php} alt="php" className=" w-10 h-10" />
-                  <div>PHP</div>
-                </div>
-                
-                <div className="mb-2">
-                  <img src={laravel} alt="laravel" className=" w-10 h-10" />
-                  <div>Laravel</div>
-                </div>
-                <div className="mb-2 ">
-                  <img src={bootstrap} alt="bootstrap" className=" w-10 h-10" />
-                  <div className="">Bootstrap</div>
-                </div>
-                <div className="mb-2">
-                  <img src={tailwind} alt="tailwind" className=" w-10 h-10" />
-                  <div>Tailwind</div>
-                </div>
+              <div className="text-lg font-bold text-center">
+                <p>Specialized in</p>
+              </div>
+              <div className="grid grid-cols-3 gap-3 mt-6">
+                {skillsIcon.map((icon, i) => (
+                  <div
+                    key={`${icon.id}-${i}`}
+                    className="flex flex-col items-center  p-4 rounded-xl shadow-md hover:shadow-lg transition"
+                  >
+                    <img
+                      src={icon.src}
+                      alt={icon.alt}
+                      className="w-12 h-12 icons rounded-lg mb-2"
+                    />
+                    <span className="text-white text-sm">{icon.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -98,17 +84,28 @@ const MySkill = ({ setSelectedPage }) => {
             <div className="relative h-32">
               <div className="z-10">
                 <div className="font-playfair p-3 bg-black font-semibold text-5xl text-black"></div>
-                <p className="font-playfair font-semibold text-3xl mt-3">
-                  Experience
+                <p
+                  className="font-playfair font-semibold text-3xl mt-3"
+                  id="box"
+                >
+                  Project-Based Experience
                 </p>
               </div>
-              <div className="w-1/2 md:w-3/4 h-32 bg-indigo-500 absolute right-0 top-0 z-[-1]" />
+              {/* {
+                isAboveMediumScreen ? (
+                  <div></div>
+                ): (
+                  <div className="w-1/2 md:w-3/4 rounded h-32 bg-cyan-600  absolute right-0 top-0 z-[-1]" />
+                )
+              } */}
             </div>
+
             <p className="mt-10">
-              I have no professional working experience but I'm very passionate
-              about programming and I've developed websites like e-commerce and
-              blogs form the courses I took and I also developed e-commerce
-              websites even tho I did have many difficulties.
+              I have no professional experience but I've been learning front-end
+              skills since 2021 and I am sure I'm pretty good at coding. And I'm
+              very passionate about programming and I've developed websites like
+              e-commerce and blogs form the courses I took and I also developed
+              e-commerce websites even tho I did have many difficulties.
             </p>
           </motion.div>
         </div>

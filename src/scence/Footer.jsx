@@ -2,7 +2,7 @@ import SocialMediaIconss from "../components/SocialMediaIconss"
 
 const Footer = ({setSelectedPage}) => {
   return (
-    <footer className="h-64 w-full bg-indigo-500 pt-10">
+    <footer className="h-64 w-full bg-cyan-500 pt-10">
         <div className="w-5/6 mx-auto">
             <SocialMediaIconss/>
             <div className="md:flex justify-center md:justify-between text-center">

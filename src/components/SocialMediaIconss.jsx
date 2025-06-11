@@ -11,8 +11,9 @@ const SocialMediaIconss = () => {
             className="hover:opacity-50 transition duration-500"
             target="_blank"
             rel="noreferrer"
+            
         >
-            <img src={Linkedin} alt="linkedin-link" />
+            <img src={Linkedin} alt="linkedin-link" className="hover:text-sky-600"/>
         </a>
         <a 
             href="https://www.twitter.com"

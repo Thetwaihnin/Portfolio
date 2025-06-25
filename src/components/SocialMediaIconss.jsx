@@ -24,7 +24,7 @@ const SocialMediaIconss = () => {
             <img src={Twitter} alt="twitter-link" />
         </a>
         <a 
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/taeyeon.sone.14606"
             className="hover:opacity-50 transition duration-500"
             target="_blank"
             rel="noreferrer"
@@ -32,7 +32,7 @@ const SocialMediaIconss = () => {
             <img src={Facebook} alt="facebook-link" />
         </a>
         <a 
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/weiibluu"
             className="hover:opacity-50 transition duration-500"
             target="_blank"
             rel="noreferrer"

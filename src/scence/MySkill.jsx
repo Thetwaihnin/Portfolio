@@ -101,11 +101,17 @@ const MySkill = ({ setSelectedPage }) => {
             </div>
 
             <p className="mt-10">
-              I have no professional experience but I've been learning front-end
-              skills since 2021 and I am sure I'm pretty good at coding. And I'm
-              very passionate about programming and I've developed websites like
-              e-commerce and blogs form the courses I took and I also developed
-              e-commerce websites even tho I did have many difficulties.
+              <h4 className="mb-4">React Developer – Personal Projects</h4>
+               I’ve been
+              building personal projects to grow my skills in front-end
+              development, focusing on React.js, TypeScript, and Tailwind CSS.
+              My work includes designing and developing interactive UIs like a
+              flower gallery with filtering and animations, a Twitter-inspired
+              layout, and a Converse product page clone. These projects helped
+              me understand responsive design, component reuseability, and real-world
+              development practices such as version control with Git and GitHub.
+              I'm actively exploring JavaScript fundamentals and React ecosystem
+              tools as I prepare to take on professional development roles
             </p>
           </motion.div>
         </div>

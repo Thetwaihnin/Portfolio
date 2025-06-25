@@ -4,6 +4,7 @@ import Project2 from "../assets/web/Screenshot (48).png";
 import GameProject from "../assets/Gaming.png";
 import Project5 from "../assets/Screenshot (18).png";
 import Project1 from "../assets/web/converseSite.png";
+import Project6 from "../assets/flower.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,6 +23,7 @@ const projectData = [
       "Designed and built a fully responsive Converse website using React,TypeScript and Tailwind CSS. Implemented REact Router to crate a multi-page experience  with routes.",
     image: Project1,
     source: "https://github.com/Thetwaihnin/converse-store-app.git",
+    demo: "#"
   },
   {
     title: "Gym Website (React + Tailwind CSS)",
@@ -29,6 +31,7 @@ const projectData = [
       "Developed a responsive gym fitness website using React.js and Tailwind CSS. I followed a Youtube tutorial for guidance and enhanced the project.",
     image: Project2,
     source: "https://github.com/Thetwaihnin/gym-app-react.git",
+    demo: "#"
   },
 
   {
@@ -36,6 +39,14 @@ const projectData = [
     description: "Responsive twitter clone",
     image: Project5,
     source: "https://github.com/Thetwaihnin/Twitter-clone.git",
+    demo: "#"
+  },
+  {
+    title: "Flowers Gallery",
+    description: "A responsive, animated flower showcase built with React and TypeScript. ",
+    image: Project6,
+    source: "https://github.com/Thetwaihnin/flowers.git",
+    demo: "#"
   },
 ];
 
@@ -99,60 +110,6 @@ const Projects = ({ title, description, source, image }) => {
   );
 };
 
-// const Projects = ({ title, description, source, image }) => {
-//   return (
-//     <motion.div
-//       className="bg-black rounded-xl overflow-hidden shadow-md border border-gray-200 hover:scale-105 transition-transform duration-300 flex flex-col"
-//       variants={projectVariants}
-//     >
-//       <img
-//         src={image}
-//         alt={title}
-//         className="h-[300px] w-full object-cover"
-//       />
-
-//       {/* Content */}
-//       <div className="flex-1 flex flex-col justify-between p-4 text-center">
-//         <div>
-//           <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-
-//           <div className="flex flex-wrap justify-center gap-2 mb-2">
-//             {title.includes("React") && (
-//               <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">React</span>
-//             )}
-//             {title.includes("Tailwind") && (
-//               <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">Tailwind CSS</span>
-//             )}
-//             {title.includes("TypeScript") && (
-//               <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">TypeScript</span>
-//             )}
-//           </div>
-
-//           <p className="text-sm text-gray-600">{description}</p>
-//         </div>
-
-//         {/* Buttons */}
-//         <div className="mt-4 flex justify-center gap-3">
-//           <a
-//             href={source}
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             <button className="px-4 py-2 text-sm bg-blue-600 text-red rounded hover:bg-cyan-400 transition-colors">
-//       Source Code
-//     </button>
-//           </a>
-//           {/* Optional: Add live demo if you have */}
-//           {/* <a href="https://your-demo-link.com" target="_blank" rel="noopener noreferrer">
-//             <button className="px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">
-//               Live Demo
-//             </button>
-//           </a> */}
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
-// };
 
 const Project = ({ setSelectedPage }) => {
   const settings = {
@@ -219,7 +176,7 @@ const Project = ({ setSelectedPage }) => {
       <div className="flex justify-center">
         <motion.div
           onViewportEnter={() => setSelectedPage("projects")}
-          className="hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:grid"
+          className="hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 md:grid"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

@@ -57,7 +57,7 @@ const Landing = ({ setSelectedPage }) => {
             Thet Wai Hnin
           </p>
           <p className="mt-10 z-30 mb-10 text-sm text-center md:text-start">
-            Hello! I'm Thet Wai Hnin.I'm a Frontend Developer.
+            Hello! I'm Thet Wai Hnin,a Frontend Developer.
           </p>
         </motion.div>
 
@@ -80,15 +80,16 @@ const Landing = ({ setSelectedPage }) => {
           >
             Contact Me
           </AnchorLink>
-          <AnchorLink
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-r-sm bg-blue pr-0.5 py-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
           >
-            <div className="bg-deep-blue hover:text-blue transiton duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
+            <div className="bg-deep-blue hover:text-blue transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
               My CV
             </div>
-          </AnchorLink>
+          </a>
         </motion.div>
 
         <motion.div

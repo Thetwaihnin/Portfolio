@@ -62,7 +62,7 @@ const projectVariants = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Projects = ({ title, description, source, image }) => {
+const Projects = ({ title, description, source, image, demo }) => {
   const overlayStyle = `absolute h-full w-full opacity-0 hover:opacity-80 transition duration-500
   md:backdrop-blur-md bg-black text-blue z-30 flex flex-col justify-center rounded hover:scale-105 items-center text-wrap md:text-black text-center py-8 px-2`;
 
@@ -87,7 +87,7 @@ const Projects = ({ title, description, source, image }) => {
               </a>
 
               <a
-                href="https://astounding-lamington-367179.netlify.app/"
+                href={demo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className=""

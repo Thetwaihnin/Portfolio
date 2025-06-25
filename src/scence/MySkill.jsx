@@ -85,7 +85,7 @@ const MySkill = ({ setSelectedPage }) => {
               <div className="z-10">
                 <div className="font-playfair  p-3 bg-black font-semibold text-5xl text-black"></div>
                 <p
-                  className="font-playfair text-center font-semibold text-3xl mt-3"
+                  className="font-playfair text-center font-semibold md:text-2xl mt-3"
                   id="box"
                 >
                   Project-Based Experience

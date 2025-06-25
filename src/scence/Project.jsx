@@ -7,7 +7,6 @@ import Project1 from "../assets/web/converseSite.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import React from "react";
 
 const projectData = [
   {
@@ -15,9 +14,10 @@ const projectData = [
     description: "Award Gaming Website",
     image: GameProject,
     source: "https://github.com/Thetwaihnin/Gaming-Web.git",
+    demo: "https://astounding-lamington-367179.netlify.app/"
   },
   {
-    title: "Converse Website (React + Typescript + Tailwind CSS)",
+    title: "Converse Website",
     description:
       "Designed and built a fully responsive Converse website using React,TypeScript and Tailwind CSS. Implemented REact Router to crate a multi-page experience  with routes.",
     image: Project1,
@@ -68,10 +68,21 @@ const Projects = ({ title, description, source, image }) => {
           </div>
 
           <div className="mt-3 text-wrap">
-            <div className="">
-              <a href={source} className=" text-cyan-500">
-                <button className="px-4 rounded bg-gray-900 py-2 hover:bg-blue hover:text-black">
-                  Source Code
+            <div className="flex justify-center gap-3">
+              <a href={source} className=" ">
+                <button className="px-4 rounded bg-gray-500 py-2 hover:bg-blue hover:text-black">
+                  Source
+                </button>
+              </a>
+
+              <a
+                href="https://astounding-lamington-367179.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                 <button className="px-4 rounded bg-gray-500 py-2 hover:bg-red hover:text-black">
+                  Live Demo {""}
                 </button>
               </a>
             </div>
@@ -104,7 +115,7 @@ const Projects = ({ title, description, source, image }) => {
 //       <div className="flex-1 flex flex-col justify-between p-4 text-center">
 //         <div>
 //           <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-          
+
 //           <div className="flex flex-wrap justify-center gap-2 mb-2">
 //             {title.includes("React") && (
 //               <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">React</span>
@@ -148,28 +159,28 @@ const Project = ({ setSelectedPage }) => {
     dots: true,
     arrows: false,
     speed: 500,
-    slidesToShow: 1, // default (mobile)
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 1024, 
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 640, // screen width < 640px
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
-       {
-        breakpoint: 3000, // ≥1024px (desktop and above)
+      {
+        breakpoint: 3000,
         settings: {
           slidesToShow: 3,
         },
@@ -204,37 +215,6 @@ const Project = ({ setSelectedPage }) => {
           Here are a few of the projects I've worked on.
         </p>
       </motion.div>
-
-      {/* PROJECTS  */}
-      {/* <div className="flex justify-center">
-        <motion.div
-          onViewportEnter={() => setSelectedPage("projects")}
-          className="hidden md:grid md:grid-cols-4 flex-wrap gap-5"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={container}
-        >
-          {projectData.map((project, index) => (
-            <Projects key={index} {...project} />
-          ))}
-        </motion.div>
-
-        <motion.div
-          onViewportEnter={() => setSelectedPage("projects")}
-          className="block md:hidden w-full px-5"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={container}
-        >
-          <Slider {...settings}>
-            {projectData.map((project, index) => (
-              <Projects key={index} {...project} />
-            ))}
-          </Slider>
-        </motion.div>
-      </div> */}
 
       <div className="flex justify-center">
         <motion.div

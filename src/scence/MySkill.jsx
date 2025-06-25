@@ -13,7 +13,7 @@ import jquery from "../assets/web/jquery-seeklogo.svg";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const MySkill = ({ setSelectedPage }) => {
-  const isAboveMediumScreen = useMediaQuery("(max-width: 1060px)");
+  // const isAboveMediumScreen = useMediaQuery("(max-width: 1060px)");
 
   const skillsIcon = [
     { id: 1, src: html, alt: "HTML", label: "HTML" },
